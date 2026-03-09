@@ -1,0 +1,10 @@
+# compiled files
+*.exe
+*.out
+*.o
+
+# vscode settings
+.vscode/
+
+# build folders
+build/
