@@ -1,28 +1,29 @@
 #include "transactions.h"
 using namespace std;
+
 transactions::transactions()
 {
-    id = 0;
-    amount = 0.0;
+    
 }
-void transactions::setId(int Newid)
-{
-    id = id;
-}
-int transactions::getId()
-{
-    return id;
-}
-
 transactions::~transactions()
 {
     
 }
 void transactions::setCategory(string Newcategory)
 {
-    category = Newcategory;
+    Transaction* newTransaction = new Transaction();
+    newTransaction->category = Newcategory;
 }
 string transactions::getCategory()
 {
-    return category;
+    Transaction* newTransaction = new Transaction();   
+    return newTransaction->category;
+}
+void transactions::setBalance(double newBalance)
+{
+    balance = newBalance;
+}
+double transactions::getBalance()
+{
+    return balance;
 }
