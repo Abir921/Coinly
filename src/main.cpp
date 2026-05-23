@@ -29,7 +29,9 @@ void displayMenu() {
     cout << "1. Add Transaction " << endl;
     cout << "2. View Transactions" << endl;
     cout << "3. Show Balance" << endl;
-    cout << "4. Exit" << endl;
+    cout << "4. Edit Transaction" << endl;
+    cout << "5. Delete Transaction" << endl;
+    cout << "6. Exit" << endl;
 }
 
 int main() {
@@ -111,8 +113,26 @@ int main() {
             cout << endl;
             cout << "YOUR BALANCE IS " << t.getBalance() << endl;
             break;
-
+        
         case 4:
+            t.displayTransactions();
+            int editIndex;
+            cout << "Enter the transaction number you want to edit: ";
+            cin >> editIndex;
+            t.editTransaction(editIndex);
+            cout << "Transaction edited successfully!" << endl;
+            break;
+
+        case 5:
+            t.displayTransactions();
+            int deleteIndex;
+            cout << "Enter the transaction number you want to delete: ";
+            cin >> deleteIndex;
+            t.deleteTransaction(deleteIndex);
+            cout << "Transaction deleted successfully!" << endl;
+            break;
+
+        case 6:
             flag = false;
             break;
 

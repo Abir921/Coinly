@@ -19,6 +19,7 @@ private:
     double balance;
     vector<Transaction> transactionList;
     string category;
+    int num;
 
 public:
     transactions();
@@ -30,6 +31,10 @@ public:
     
     void addTransaction(double amount, string type, string category, string date);
     void displayTransactions();
+
+    void editTransaction(int index);
+    void deleteTransaction(int index);
+
     ~transactions();
     
 };
